@@ -72,20 +72,6 @@
     margin-bottom: 1rem;
     white-space: pre-wrap;
     word-wrap: break-word;
-}
-
-.post-image {
-    width: 100%;
-    border-radius: var(--radius-md);
-    margin-top: 1rem;
-    max-height: 500px;
-    object-fit: cover;
-}
-
-.post-actions {
-    display: flex;
-    gap: 1rem;
-    padding-top: 1rem;
     border-top: 1px solid var(--border-color);
 }
 

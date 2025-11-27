@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import Button from './Button';
@@ -7,10 +8,17 @@ const Navbar = () => {
     const { user, logout } = useAuth();
     const navigate = useNavigate();
 
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
     const handleLogout = async () => {
         try {
             await logout();
             navigate('/login');
+            setIsMenuOpen(false);
         } catch (error) {
             console.error('Logout failed:', error);
         }
@@ -23,8 +31,12 @@ const Navbar = () => {
                     <span className="gradient-text">Zee App</span>
                 </Link>
 
-                <div className="navbar-menu">
-                    <Link to="/" className="navbar-link">Posts</Link>
+                <button className="navbar-toggle" onClick={toggleMenu}>
+                    <span className={`hamburger ${isMenuOpen ? 'active' : ''}`}></span>
+                </button>
+
+                <div className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
+                    <Link to="/" className="navbar-link" onClick={() => setIsMenuOpen(false)}>Posts</Link>
 
                     {user ? (
                         <>
@@ -38,7 +50,7 @@ const Navbar = () => {
                                 )}
                                 <span className="navbar-username">{user.username}</span>
                             </div>
-                            <Link to={`/profile/${user._id}`}>
+                            <Link to={`/profile/${user._id}`} onClick={() => setIsMenuOpen(false)}>
                                 <Button variant="ghost" size="sm">My Profile</Button>
                             </Link>
                             <Button variant="ghost" size="sm" onClick={handleLogout}>
@@ -47,10 +59,10 @@ const Navbar = () => {
                         </>
                     ) : (
                         <>
-                            <Link to="/login">
+                            <Link to="/login" onClick={() => setIsMenuOpen(false)}>
                                 <Button variant="ghost" size="sm">Login</Button>
                             </Link>
-                            <Link to="/register">
+                            <Link to="/register" onClick={() => setIsMenuOpen(false)}>
                                 <Button variant="primary" size="sm">Register</Button>
                             </Link>
                         </>
