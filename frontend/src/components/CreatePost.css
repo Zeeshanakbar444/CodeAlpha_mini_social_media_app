@@ -94,3 +94,49 @@
     border-color: var(--primary-400);
     color: var(--text-primary);
 }
+
+/* Responsive Breakpoints */
+@media (max-width: 767px) {
+    .create-post {
+        margin-bottom: 1.5rem;
+    }
+
+    .create-post h3 {
+        font-size: 1.125rem;
+    }
+
+    .post-textarea {
+        min-height: 100px;
+        font-size: 0.9375rem;
+    }
+
+    .image-preview img {
+        max-height: 200px;
+    }
+
+    .create-post-actions {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .image-upload-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .post-textarea {
+        min-height: 120px;
+    }
+
+    .image-preview img {
+        max-height: 250px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .post-textarea {
+        min-height: 150px;
+    }
+}

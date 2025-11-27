@@ -110,3 +110,59 @@
     white-space: pre-wrap;
     word-wrap: break-word;
 }
+
+@media (max-width: 767px) {
+    .post-detail-container {
+        padding: 1rem 0;
+    }
+
+    .post-detail-card {
+        margin: 1rem 0;
+        border-radius: 0;
+    }
+
+    .post-image {
+        max-height: 300px;
+    }
+
+    .comment-item {
+        padding: 0.75rem;
+    }
+
+    .comment-avatar {
+        width: 32px;
+        height: 32px;
+    }
+
+    .comment-textarea {
+        font-size: 0.9375rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .post-detail-card,
+    .comments-section {
+        max-width: 700px;
+    }
+
+    .post-detail-container {
+        padding: 1.5rem 0;
+    }
+
+    .comment-item {
+        padding: 0.875rem;
+    }
+}
+
+@media (min-width: 1025px) {
+
+    .post-detail-card,
+    .comments-section {
+        max-width: 900px;
+    }
+
+    .comments-section {
+        margin-top: 2rem;
+    }
+}

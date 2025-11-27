@@ -105,3 +105,30 @@
         transform: rotate(360deg);
     }
 }
+
+/* Responsive Breakpoints */
+@media (max-width: 767px) {
+    .btn-sm {
+        padding: 0.5rem 0.875rem;
+        min-height: 44px;
+        /* Touch-friendly size */
+    }
+
+    .btn-md {
+        padding: 0.625rem 1.25rem;
+        min-height: 44px;
+        font-size: 0.9375rem;
+    }
+
+    .btn-lg {
+        padding: 0.875rem 1.75rem;
+        min-height: 48px;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .btn-md {
+        padding: 0.6875rem 1.375rem;
+    }
+}

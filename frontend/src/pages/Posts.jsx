@@ -48,16 +48,7 @@ const Posts = () => {
         }
     };
 
-    const handleDelete = async (postId) => {
-        if (!user) return;
 
-        try {
-            await api.delete(`/post/delete-post/${postId}`);
-            fetchPosts();
-        } catch (error) {
-            console.error('Failed to delete post:', error);
-        }
-    };
 
     if (loading) {
         return (
@@ -94,7 +85,6 @@ const Posts = () => {
                                 key={post._id}
                                 post={post}
                                 onLike={handleLike}
-                                onDelete={handleDelete}
                                 currentUser={user}
                             />
                         ))
