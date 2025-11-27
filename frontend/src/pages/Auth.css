@@ -46,6 +46,20 @@
     margin-bottom: 1rem;
 }
 
+.avatar-label-text {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+.avatar-helper-text {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-top: -0.5rem;
+}
+
 .avatar-preview {
     width: 120px;
     height: 120px;

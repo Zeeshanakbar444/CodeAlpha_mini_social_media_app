@@ -81,6 +81,8 @@ const Register = () => {
                     {error && <div className="error-message">{error}</div>}
 
                     <div className="avatar-upload">
+                        <label className="avatar-label-text">Profile Avatar</label>
+                        <p className="avatar-helper-text">Upload your profile picture</p>
                         <div className="avatar-preview">
                             {avatarPreview ? (
                                 <img src={avatarPreview} alt="Avatar preview" />

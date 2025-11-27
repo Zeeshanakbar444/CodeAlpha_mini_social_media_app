@@ -16,8 +16,8 @@
 }
 
 .post-avatar {
-    width: 48px;
-    height: 48px;
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid var(--primary-500);
@@ -138,8 +138,8 @@
     }
 
     .post-avatar {
-        width: 36px;
-        height: 36px;
+        width: 44px;
+        height: 44px;
     }
 
     .post-username {
@@ -186,8 +186,8 @@
     }
 
     .post-avatar {
-        width: 40px;
-        height: 40px;
+        width: 48px;
+        height: 48px;
     }
 
     .post-username {
@@ -216,8 +216,8 @@
 /* Tablet (768px - 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
     .post-avatar {
-        width: 44px;
-        height: 44px;
+        width: 56px;
+        height: 56px;
     }
 
     .post-image {
