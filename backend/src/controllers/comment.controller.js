@@ -9,6 +9,7 @@ export const getComment = asyncHandler(async (req, res) => {
   return res.status(200).json({
     message: "fetch comment successfully",
     success: true,
+    data: comment,
   });
 });
 export const createComment = asyncHandler(async (req, res) => {
@@ -26,7 +27,7 @@ export const createComment = asyncHandler(async (req, res) => {
 
   const comment = new Comment({
     content,
-    author: req.userId,
+    author: req.user._id,
     post: req.params.postId,
   });
 
@@ -51,7 +52,7 @@ export const deleteComment = asyncHandler(async (req, res) => {
   }
 
   // Check if user is the author
-  if (comment.author.toString() !== req.userId) {
+  if (comment.author.toString() !== req.user._id.toString()) {
     return res.status(403).json({ message: "Not authorized" });
   }
 

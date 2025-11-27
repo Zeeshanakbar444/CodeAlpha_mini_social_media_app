@@ -1,0 +1,121 @@
+.post-card {
+    animation: fadeIn 0.3s ease-out;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.post-author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.post-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary-500);
+}
+
+.post-username {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.post-username.clickable {
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.post-username.clickable:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.post-username-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.follower-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.125rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.15) 0%, rgba(236, 72, 153, 0.15) 100%);
+    color: #a855f7;
+    border-radius: 12px;
+    border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.post-time {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.post-content {
+    margin-bottom: 1rem;
+}
+
+.post-content p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.post-image {
+    width: 100%;
+    border-radius: var(--radius-md);
+    margin-top: 1rem;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.post-actions {
+    display: flex;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.action-btn:hover {
+    background: var(--bg-hover);
+    border-color: var(--primary-400);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+}
+
+.action-btn.liked {
+    color: var(--accent-500);
+    border-color: var(--accent-500);
+}
+
+.action-icon {
+    font-size: 1.25rem;
+}

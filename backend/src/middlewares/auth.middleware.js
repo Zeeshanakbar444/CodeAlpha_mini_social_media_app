@@ -7,7 +7,7 @@ export const verifiJWT = asyncHandler(async (req, res, next) => {
     const token =
       req.cookies?.token || req.header("Authorization")?.replace("Bearer ", "");
     if (!token) {
-      return res.status(400).json({
+      return res.status(401).json({
         message: "unauthorized access",
         success: false,
       });
